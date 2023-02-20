@@ -36,15 +36,10 @@ p{
   
 }
 
-a {
-  color: var(--blue);
-}
-
-/* .wrapper {
-  
-} */
 
 
+
+/* Card del tweet */
 
 .card {
   display: flex;
@@ -57,6 +52,8 @@ a {
 
 }
 
+ /* imagen del perfil */
+
 .profile-container {
   width: 48px;
   height: 48px;
@@ -64,40 +61,58 @@ a {
   
 }
 
+/* contenido del tweet */
+
 .tweet-text {
   min-width: 264px;
   max-width: 572px;
 }
 
-.tweet-text p:nth-child(1)  {
+/* nombre */
+
+.user-info p:nth-child(1)  {
   font: var(--body2-bold);
+  margin: 0;
 }
 
-.tweet-text p:nth-child(2)  {
+/* @leonidas esteban */
+
+.tweet-text .username {
   font: var(--body2-regular);
   color: var(--grey);
   margin-bottom: 8px;
 }
 
-.tweet-text p:nth-child(3)  {
+/* texto */
+
+.tweet-text .tweet-info  {
   margin-bottom: 16px;
 }
 
+.tweet-text .link{
+  color: var(--blue);
+}
+
+
+/* caja de enlace */
 
 .enlace-tweet {
   min-width: 264px;
   max-width: 572px;
-  height: 82px;
+  height: 82.8px;
   display: flex;
   border: 1px solid var(--grey);
   border-radius: 24px;
   margin-bottom: 16px;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .enlace-tweet figure {
   margin: 0;
   margin-right: 16px;
+  background-color: var(--grey);
+  border-radius: 20px;
   
 }
 
@@ -118,19 +133,177 @@ a {
   
 }
 
+.description-enlace {
+  color: var(--grey);
+}
+
+/* Componente de likes */
+
 .like {
   width: 57px;
   height: 35.23px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: var(--grey);
+  
   font: var(--body2-regular);
+}
+
+.like-counter {
+  color: var(--grey);
+  margin-top: 8px;
 }
 
 
 
 
+.like div{
+  width: 34px;
+  height: 39px;
+  background: url('/images/likeSpritesMobile.svg');
+  z-index: -1;
+}
+
+.like-active {
+  background: url('/images/likeActiveMobile.svg');
+  background-repeat: no-repeat;
+}
+
+
+
+.like-animation {
+  animation: likeAnimation 0.5s steps(3);
+  
+}
+
+.like-color {
+  color: var(--pink);
+}
+
+
+
+@keyframes likeAnimation{  
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position:-104.31px;
+    
+  }
+}
+
+
+.like:hover {
+  cursor: pointer;
+}
+
+
+
 .debbug { 
   border: 1px solid red;
+}
+
+
+
+@media (min-width:690px) {
+
+  /* wrapper */
+
+  .wrapper {
+    min-width: 360px;
+    max-width: 700px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* perfil */
+
+  .profile-container {
+    width: 64px;
+    height: 64px;
+  }
+
+  .profile-container img {
+    width: 64px;
+    height: 64px;
+    
+  }
+
+  /* @leonidas */
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    
+  }
+
+  .tweet-text {
+    margin-bottom: 16px;
+  }
+
+  .user-info p:nth-child(1)  {
+    font: var(--body1-bold);
+  }
+
+  .tweet-text .username {
+    margin: 0;
+    margin-left: 16px;
+    font: var(--body1-regular);
+  }
+
+  .tweet-text .tweet-info  {
+    margin-bottom: 16px;
+    font: var(--body1-regular);
+  }
+
+  /* tweet completo */
+
+  .card {
+    height: 447.54px;
+    padding: 24px;
+  }
+
+  /* caja de enlace */
+  .enlace-tweet {
+    width: 572px;
+    height: 144px;
+  }
+
+  .enlace-tweet figure img {
+    width: 160px;
+    height: 144px;  
+  }
+
+  /* Componente de likes */
+
+  .like {
+    width: 85.23px;
+    height: 47.54px;
+  }
+
+  .like div {
+    width: 47.23px;
+    height: 47.54px;
+    background: url('/images/likeSprites.svg');
+  }
+
+  .like-active {
+    background: url('/images/likeActive.png');
+    background-repeat: no-repeat;
+    
+  }
+
+
+  @keyframes likeAnimation{  
+    100%{
+      background-position:-141.69px;
+      
+    }
+  }
+  
+
+
 }
