@@ -160,12 +160,12 @@ p{
 .like div{
   width: 34px;
   height: 39px;
-  background: url('/images/likeSpritesMobile.svg');
+  background: url('./images/likeSpritesMobile.svg');
   z-index: -1;
 }
 
 .like-active {
-  background: url('/images/likeActiveMobile.svg');
+  background: url('./images/likeActiveMobile.svg');
   background-repeat: no-repeat;
 }
 
@@ -287,11 +287,11 @@ p{
   .like div {
     width: 47.23px;
     height: 47.54px;
-    background: url('/images/likeSprites.svg');
+    background: url('./images/likeSprites.svg');
   }
 
   .like-active {
-    background: url('/images/likeActive.png');
+    background: url('./images/likeActive.png');
     background-repeat: no-repeat;
     
   }
