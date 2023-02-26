@@ -165,7 +165,7 @@ p{
 }
 
 .like-active {
-  background: url('..l/images/likeActiveMobile.svg');
+  background: url('../images/likeActiveMobile.svg');
   background-repeat: no-repeat;
 }
 
@@ -287,11 +287,11 @@ p{
   .like div {
     width: 47.23px;
     height: 47.54px;
-    background: url("/images/likeSprites.svg");
+    background: url("../images/likeSprites.svg");
   }
 
   .like-active {
-    background: url('/images/likeActive.png');
+    background: url('../images/likeActive.png');
     background-repeat: no-repeat;
     
   }
